@@ -19,3 +19,12 @@ $("#textbox").on("keypress",function(event){
         $("ul").append("<li class='disable-select'><span><i class='fa fa-trash' aria-hidden='true'></i></span>"+ newTodo +"</li>");
     };
 });
+
+$("i.fa-plus").on("click", function(){
+    var newTodo = $("#textbox").val();
+    $("#textbox").val("");
+    $("ul").append("<li class='disable-select'><span><i class='fa fa-trash' aria-hidden='true'></i></span>"+ newTodo +"</li>");
+});
+
+
+
