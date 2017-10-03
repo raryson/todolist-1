@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
 
-mongoClient.connect('mongodb://localhost/dbdogs', (err, db) => {
+mongoClient.connect('mongodb://dbdogs:w-h5U#Qz4{ntatooine.mongodb.umbler.com:48145/dbdogs', (err, db) => {
 
         if (!err) {
             let todo = req.body.todo;
@@ -35,8 +35,8 @@ mongoClient.connect('mongodb://localhost/dbdogs', (err, db) => {
 
 app.post('/', (req, res) => {
 
-    mongoClient.connect('mongodb://localhost/dbdogs', (err, db) => {
-
+    mongoClient.connect('mongodb://dbdogs:w-h5U#Qz4{ntatooine.mongodb.umbler.com:48145/dbdogs', (err, db) => {
+        
         if (!err) {
             let todo = req.body.todo;
             let collection = db.collection('dogsCollection');
