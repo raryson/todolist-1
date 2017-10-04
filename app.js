@@ -34,7 +34,7 @@ mongoClient.connect('mongodb://dbdogs:w-h5U#Qz4{n@tatooine.mongodb.umbler.com:48
 });
 
 app.get('/bicca', (req, res)=> {
-	res.render('bicca');
+	res.send("BICCA BICCA");
 });
 
 app.post('/', (req, res) => {
