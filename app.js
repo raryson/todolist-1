@@ -33,11 +33,7 @@ mongoClient.connect('mongodb://dbdogs:w-h5U#Qz4{n@tatooine.mongodb.umbler.com:48
 
 });
 
-app.get('/bicca', (req, res)=> {
-	res.render('bicca');
-});
-
-app.post('/', (req, res) => {
+app.post('/addTodo', (req, res) => {
 
     mongoClient.connect('mongodb://dbdogs:w-h5U#Qz4{n@tatooine.mongodb.umbler.com:48145/dbdogs', (err, db) => {
         
@@ -54,6 +50,18 @@ app.post('/', (req, res) => {
         })
     res.sendStatus(200);
 });
+
+app.post('/removeTodo', (req, res)=> {
+    
+    mongoClient.connect('mongodb://dbdogs:w-h5U#Qz4{n@tatooine.mongodb.umbler.com:48145/dbdogs', (err, db) => {
+        
+        if (!err) {
+            let todo = req.body.todo;
+
+
+    });
+
+
 
 app.listen(3000, () => {
     console.log('Ouvindo na 3000');
