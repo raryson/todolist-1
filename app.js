@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
 
-mongoClient.connect('mongodb://dbdogs:w-h5U#Qz4{n@tatooine.mongodb.umbler.com:48145/dbdogs', (err, db) => {
+mongoClient.connect('url', (err, db) => {
 
         if (!err) {
             let todo = req.body.todo;
@@ -35,7 +35,7 @@ mongoClient.connect('mongodb://dbdogs:w-h5U#Qz4{n@tatooine.mongodb.umbler.com:48
 
 app.post('/addTodo', (req, res) => {
 
-    mongoClient.connect('mongodb://dbdogs:w-h5U#Qz4{n@tatooine.mongodb.umbler.com:48145/dbdogs', (err, db) => {
+    mongoClient.connect('url', (err, db) => {
         
         if (!err) {
             let todo = req.body.todo;
@@ -53,13 +53,16 @@ app.post('/addTodo', (req, res) => {
 
 app.post('/removeTodo', (req, res)=> {
     
-    mongoClient.connect('mongodb://dbdogs:w-h5U#Qz4{n@tatooine.mongodb.umbler.com:48145/dbdogs', (err, db) => {
+    mongoClient.connect('url', (err, db) => {
         
         if (!err) {
             let todo = req.body.todo;
 
-
+        }
     });
+
+});
+    
 
 
 
