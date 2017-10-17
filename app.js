@@ -15,7 +15,7 @@ app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
 
-mongoClient.connect('mongodb://localhost/todolist', (err, db) => {
+    mongoClient.connect('mongodb://dbdogs:w-h5U#Qz4{n@tatooine.mongodb.umbler.com:48145/dbdogs', (err, db) => {
 
         if (!err) {
             let todo = req.body.todo;
@@ -37,8 +37,8 @@ mongoClient.connect('mongodb://localhost/todolist', (err, db) => {
 
 app.post('/addTodo', (req, res) => {
 
-    mongoClient.connect('mongodb://localhost/todolist', (err, db) => {
-        
+    mongoClient.connect('mongodb://dbdogs:w-h5U#Qz4{n@tatooine.mongodb.umbler.com:48145/dbdogs', (err, db) => {
+
         if (!err) {
             let todo = req.body.todo;
             let collection = db.collection('dogsCollection');
@@ -46,36 +46,38 @@ app.post('/addTodo', (req, res) => {
             collection.insert({
                 reminder: todo
             });
-            
+
         }
         db.close();
-        })
+    })
     res.sendStatus(200);
 });
 
-app.post('/removeTodo', (req, res)=> {
-    
-    mongoClient.connect('mongodb://localhost/todolist', (err, db) => {
-        
+app.post('/removeTodo', (req, res) => {
+
+    mongoClient.connect('mongodb://dbdogs:w-h5U#Qz4{n@tatooine.mongodb.umbler.com:48145/dbdogs', (err, db) => {
+
         if (!err) {
             let todo = req.body.removedTodo;
             let id = req.body.id;
 
 
             let collection = db.collection('dogsCollection');
-            
+
             collection.deleteOne({
-                _id: ObjectId("59e5664198b3d11c36841694")
+                _id: ObjectId(id)
             })
 
-        }throw err
+        } else {
+            throw err
+        }
         db.close();
-        
-    
+
+
     });
     res.sendStatus(200);
 });
-    
+
 
 
 
