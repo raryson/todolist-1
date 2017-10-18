@@ -29,7 +29,11 @@ span{
     text-align: center;
     color: white;
     width: 40px;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    webkit-align-items: center;
+    -webkit-justify-content: center;
+    
   
 }
 
@@ -48,12 +52,13 @@ body {
 }
 
 
-
 li {
     background: #fff;
     height: 40px;
     color: #666;
     text-align: left;
+    display: flex;
+    align-items: center;
 }
 
 input{
