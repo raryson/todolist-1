@@ -41,7 +41,7 @@ span{
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif, Arial, Verdana,;
     background: #56CCF2;  /* fallback for old browsers */
     background: -webkit-linear-gradient(left, #2F80ED, #56CCF2);
     background: -moz-linear-gradient(left, #2F80ED, #56CCF2);
