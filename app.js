@@ -34,6 +34,10 @@ app.get('/', (req, res) => {
     });
 });
 
+app.get('/contribuitors', (req, res) => {
+    res.send('Página onde vão ficar os dados dos criadores desse TodoIst')
+})
+
 app.post('/adicionar', (req, res) => {
 
     mongoClient.connect('url', (err, db) => {
